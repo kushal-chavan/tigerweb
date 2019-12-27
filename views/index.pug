@@ -1,0 +1,102 @@
+extends layout
+
+block content
+    main(role='main')
+    #myCarousel.carousel.slide(data-ride='carousel')
+        ol.carousel-indicators
+            li.active(data-target='#myCarousel', data-slide-to='0')
+            li(data-target='#myCarousel', data-slide-to='1')
+            li(data-target='#myCarousel', data-slide-to='2')
+        .carousel-inner
+            .carousel-item.active
+                img.first-slide(src='https://webnus.net/themes/easyweb/design/wp-content/uploads/2016/02/easy-design-slider2p1b.jpg', alt='First slide')
+                .container
+                    .carousel-caption.text-left
+                        h1 Expect nothing <br>less than perfect
+                        p
+                        | Responsive designs have allowed users to take one website and fit onto any screen size. Website design trends are meeting more of a theatrical and cinematic based experience. Finding creative ways for users to navigate your site will continue to keep them more interested.
+                        p
+                        a.btn.btn-lg.btn-primary(href='#', role='button') Sign up today
+            .carousel-item
+                img.second-slide(src='https://webnus.net/themes/easyweb/design/wp-content/uploads/2016/03/easy-design-slider2p6.jpg', alt='Second slide')
+                .container
+                    .carousel-caption
+                        h1 Start up &<br>Never stop
+                        p
+                        | We are a creative agency with a passion for design. Our methodical approach is focused on revealing the essence of each design challenge to allow us to create holistic and durable solutions.
+                        p
+                        a.btn.btn-lg.btn-primary(href='#', role='button') Learn more
+            .carousel-item
+                img.third-slide(src='https://webnus.net/themes/easyweb/design/wp-content/uploads/2016/03/easy-design-slider2p6.jpg', alt='Third slide')
+                .container
+                    .carousel-caption.text-right
+                        h1 A True Business Partner.
+                        p
+                        | We create meaningful websites that offer simplistic user experiences, achieve high rankings on the most popular search engines and promote your brand to the widest possible audience.
+                        p
+                        a.btn.btn-lg.btn-primary(href='#', role='button') Browse gallery
+            a.carousel-control-prev(href='#myCarousel', role='button', data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.sr-only Previous
+            a.carousel-control-next(href='#myCarousel', role='button', data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.sr-only Next
+
+    div(class='container-fluid')          
+        div(class='row')
+            div(class='col-md-3 mt-4')
+                .card.bg-primary.text-white
+                    .card-body.text-center
+                        i.fas.fa-desktop.fa-7x
+                        p
+                        h5.card-title Website Design
+                        p.card-text Having a unique website design is important part of the branding and marketing process of your business
+                        a.btn.btn-dark(href='/about') Read More
+            div(class='col-md-3 mt-4')
+                .card.bg-success.text-white
+                    .card-body.text-center
+                        i.fab.fa-stack-overflow.fa-7x
+                        p
+                        h5.card-title Web Development
+                        p.card-text Our new fangled approach to Development is directed creating and building deep love for your website
+                        a.btn.btn-warning(href='/about') Read More
+            div(class='col-md-3 mt-4')
+                .card.bg-danger.text-white
+                    .card-body.text-center
+                        i.fas.fa-chart-bar.fa-7x
+                        p
+                        h5.card-title SEO Optimization
+                        p.card-text Top rankings for desired search terms and drive qualified leads that are crucial to building your business
+                        a.btn.btn-success(href='/about') Read More
+            div(class='col-md-3 mt-4')
+                .card.bg-dark.text-white
+                    .card-body.text-center
+                        i.fas.fa-globe.fa-7x
+                        p
+                        h5.card-title Online Marketing
+                        p.card-text Our marketing teams work to increase your conversions, repeat traffic, and expand your online visibility
+                        a.btn.btn-info(href='/about') Read More
+
+    .pricing-header.px-3.py-3.pt-md-5.pb-md-4.mx-auto.text-center
+    .container
+        
+
+        div(class='row mt-4 mb-4')
+            div(class='col-md-6 mt-4')
+                .card.border-primary
+                    .card-body
+                        i.fas.fa-phone-square.fa-5x.text-primary
+                        p
+                        h5.card-title Call Us Now
+                        p.card-text Call us any time 24/7 we always there for your help.
+                        a.btn.btn-outline-primary(href='tel:9860342268') Call Now
+            div(class='col-md-6 mt-4')
+                .card.border-success
+                    .card-body
+                        i.fas.fa-comments.fa-5x.text-success
+                        p
+                        h5.card-title Online Chat
+                        p.card-text A simple text message is another way to contacts us.
+                        a.btn.btn-outline-success(href='javascript:void(Tawk_API.toggle())') Chat Now
+    include includes/main-footer
+    include includes/chatbox

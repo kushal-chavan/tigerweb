@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+    div(class='container')
+        div(class="card col-md-6 offset-md-3 mt-5")
+            div(class="card-body pb-5")
+                h1(class="card-title text-center") #{title}
+                ul(class="list-group")
+                li(class="list-group-item") Name: #{user.name}
+                ul(class="list-group")
+                li(class="list-group-item") Phone No: #{user.phone}
+                ul(class="list-group")
+                li(class="list-group-item") Username: #{user.username}
+                ul(class="list-group")
+                li(class="list-group-item") Email: #{user.email}

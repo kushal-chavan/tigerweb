@@ -1,0 +1,65 @@
+extends ../layout
+
+block content
+
+
+    div(class="jumbotron bg-success")
+        h3(class="display-4 text-center text-white") Welcome to Contact
+    .container
+        div(class="card mt-4 mb-4")
+            div(class="card-body")
+                h5(class="card-title") Contact Us Here:
+                div(class="row")
+                        div(class="col-md-6")
+                            ul  
+                                li  Contact Number : +91 9860342268
+                                li  Whatsapp Number : +91 9860342268
+                                li  Techincal Support Email : support@tigerweb.co.in
+                        div(class="col-md-6")
+                            ul
+                                li  Contact Email : info@tigerweb.co.in
+                                li  Address : Office no 304, Sai ganga, Undri, Pune 411060.
+
+        div(class="card mt-4 mb-4")
+          div(class="card-body")
+            h5(class="card-title") Enquiry Form
+            .row
+                .col-md-6
+                    form(method='POST', action='/pages/contact/send')
+                        .form-row
+                            .form-group.col-md-6
+                                label Your Name
+                                input.form-control(name='name', type='text' required)
+                            .form-group.col-md-6
+                                label Phone number
+                                input.form-control(name='phone', type='number' required)
+                        .form-group
+                            label Your Email
+                            input.form-control(name='email', type='email' required)
+                        .form-group
+                            label Company
+                            input.form-control(name='company', type='text')
+                        .form-group
+                            label Your Message
+                            textarea.form-control(rows='5', name='message', type='text' required)
+                        input.btn.btn-primary.btn-block(type='submit', value='Send')
+
+                .col-md-6
+                    div(id="googleMap" style="width:100%;height:476px;")
+    
+    script.
+        function myMap() {
+            var myCenter = new google.maps.LatLng(18.5233014,73.8334396);
+            var mapCanvas = document.getElementById("googleMap");
+            var mapOptions = {center: myCenter, 
+                              zoom: 11,
+                              styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+                            };
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var marker = new google.maps.Marker({position:myCenter});
+            marker.setMap(map);
+        }
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBa1fLckVcoU1ctnMIzAeMFA8jhW_nuSP0&callback=myMap")
+
+    include ../includes/main-footer
+    include ../includes/chatbox

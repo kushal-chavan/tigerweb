@@ -1,0 +1,15 @@
+extends navbar
+
+block content
+ .container
+  div(class="card col-md-6 offset-md-3 mt-5")
+    div(class="card-body")
+        h1(class="card-title text-center") #{title}
+        form(method='POST', action='/control/login')
+            .form-group
+                label Username
+                input.form-control(name='username', type='text')
+            .form-group
+                label Password
+                input.form-control(name='password', type='password')
+            input.btn.btn-danger.btn-block.mt-3(type='submit', value='Submit')

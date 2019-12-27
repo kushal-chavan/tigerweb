@@ -1,0 +1,15 @@
+extends layout
+
+block content
+ .container.mt-4
+  div(class="card mt-5")
+    div(class="card-body")
+      h1(class="card-title text-center") Edit Article
+      form(method='POST', action='/blog/articles/edit/'+article._id)
+          .form-group
+              label Title
+              input.form-control(name='title', type='text', value=article.title)
+          .form-group
+              label Article
+              textarea.form-control(rows='7', name='body')= article.body
+          input.btn.btn-primary(type='submit', value='Submit')

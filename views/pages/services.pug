@@ -1,0 +1,51 @@
+extends ../layout
+
+block content
+
+    .container.mt-4
+        div(class="jumbotron")
+            h1(class="display-4 text-center mb-4") Welcome to Services
+            p(class="lead text-center") We are a creative agency with a passion for design.
+            p(class='text-center') Having a unique website design is important part of the branding and marketing process of your business
+            p(class="lead text-center")
+                a(class="btn btn-primary btn-lg mr-2" href="/users/login" role="button")
+                    i.fas.fa-user
+                    |  Login
+                a(class="btn btn-success btn-lg" href="/users/register" role="button") Register
+        
+        div(class='row')
+            div(class='col-md-3 mt-4')
+                .card.bg-primary.text-white
+                    .card-body.text-center
+                        i.fas.fa-desktop.fa-7x
+                        p
+                        h5.card-title Website Design
+                        p.card-text Having a unique website design is important part of the branding and marketing process of your business
+
+            div(class='col-md-3 mt-4')
+                .card.bg-success.text-white
+                    .card-body.text-center
+                        i.fab.fa-stack-overflow.fa-7x
+                        p
+                        h5.card-title Web Development
+                        p.card-text Our new fangled approach to Development is directed creating and building deep love for your website
+      
+            div(class='col-md-3 mt-4')
+                .card.bg-danger.text-white
+                    .card-body.text-center
+                        i.fas.fa-chart-bar.fa-7x
+                        p
+                        h5.card-title SEO Optimization
+                        p.card-text Top rankings for desired search terms and drive qualified leads that are crucial to building your business
+                     
+            div(class='col-md-3 mt-4')
+                .card.bg-dark.text-white
+                    .card-body.text-center
+                        i.fas.fa-globe.fa-7x
+                        p
+                        h5.card-title Online Marketing
+                        p.card-text Our marketing teams work to increase your conversions, repeat traffic, and expand your online visibility
+                   
+
+    include ../includes/main-footer
+    include ../includes/chatbox

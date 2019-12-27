@@ -1,0 +1,33 @@
+extends ../layout
+
+block content
+
+    .container.mt-4
+        div(class="card mt-4")
+            h5(class="card-header bg-secondary text-white") My Services
+            table.table
+                thead
+                    tr
+                    th(scope='col') Product
+                    th(scope='col') Expires
+                    th(scope='col') Total
+                    th(scope='col') Status
+                tbody
+                    tr
+                        td Hosting
+                        td 5/5/2018
+                        td Rs 1500/-
+                        td
+                          button.btn.btn-success Active
+                    tr
+                        td Domain
+                        td 16/8/2018
+                        td Rs 1500/-
+                        td
+                          button.btn.btn-success Active
+                    tr
+                        td VPS Server
+                        td 25/12/2017
+                        td Rs 1500/-
+                        td
+                          button.btn.btn-danger Inactive

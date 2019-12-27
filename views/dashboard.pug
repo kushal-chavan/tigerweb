@@ -1,0 +1,91 @@
+extends layout
+
+block content
+
+    div(class='container')
+        div(class="card mt-4 bg-light")
+            h5(class="card-header") #{user.username}'s Dashboard
+            div.card-body.bg-secondary
+                .row
+                    .col-md-3
+                        .card.mb-2
+                            .card-body
+                                i.fas.fa-cogs.fa-5x.text-primary
+                                p
+                                h5.card-title My Services
+                                hr
+                                a(class='btn btn-primary' href='/users/myservices') View
+                    .col-md-3
+                        .card.mb-2
+                            .card-body
+                                i.fas.fa-credit-card.fa-5x.text-warning
+                                p
+                                h5.card-title My invoice
+                                hr
+                                a(class='btn btn-primary' href='/users/invoice') View
+                    .col-md-3
+                        .card.mb-2
+                            .card-body
+                                i.fas.fa-globe.fa-5x.text-success
+                                p
+                                h5.card-title My Domain
+                                hr
+                                a(class='btn btn-primary' href='/users/domain') View
+                    .col-md-3
+                        .card.mb-2
+                            .card-body
+                                i.fab.fa-whatsapp.fa-5x.text-success
+                                p
+                                h5.card-title Support
+                                hr
+                                a(class='btn btn-primary' data-toggle="modal" data-target="#exampleModal" href='#') Contact
+        .row
+            .col-md-6
+                div(class="card mt-4 bg-light")
+                    h5(class="card-header") Tigerweb Bank Details
+                    div.card-body
+                        h6 Account Name: Kushal Chavan
+                        h6 Bank Name: Kotak Mahindra Bank
+                        h6 Account Number: 2112746937
+                        h6 IFSC code: KKBK0000724
+                        hr
+                        h5 For UPI Payment:
+                        h6 9860342268@kotak
+            .col-md-6
+                div(class="card mt-4 bg-light")
+                    h5(class="card-header") Message
+                    div.card-body
+                        h5 No Messages
+    
+        #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5#exampleModalLabel.modal-title Support
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .modal-body
+                        form
+                            .form-row
+                                .form-group.col-md-6
+                                    label Username
+                                    input.form-control(name='name', type='text')
+                                .form-group.col-md-6
+                                    label Phone number
+                                    input.form-control(name='phone', type='number')
+                            .form-group
+                                label Your Email
+                                input.form-control(name='email', type='email')
+                            .form-group
+                                label Product Name
+                                input.form-control(name='company', type='text')
+                            .form-group
+                                label Your Issues
+                                textarea.form-control(rows='5', name='message', type='text')
+                    .modal-footer
+                        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                        button.btn.btn-primary(type='button') Send
+            
+
+            
+                                

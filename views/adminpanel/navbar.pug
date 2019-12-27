@@ -1,0 +1,71 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="description", content="Tigerweb is a premium design agency that
+         focuses on quality, innovation, & speed. We utilized technology to bring results to 
+         grow our clients businesses. Throughout the years Tigerweb has been able to create stunning, 
+        great designs in multiple verticals while allowing our clients to obtain an overall better web presence.")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="robots" content="index, nofollow") 
+        meta(name="keywords" content="Tigerweb, Tigerweb Apps Development, web design, web design in pune, website designing in pune, website development, website designing, pune websites")
+        
+        link(rel='apple-touch-icon-precomposed', href='/img/favicon.ico')
+        link(rel='apple-touch-icon-precomposed', sizes='72x72', href='/img/favicon.ico')
+        link(rel='shortcut icon', href='/img/favicon.ico')
+
+        script(defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js")
+        link(rel='stylesheet' type="text/css" href="/css/custom.css")
+        link(type='text/css' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+        link(rel="stylesheet" href="/dist/css/bootstrap.min.css")
+        script(src="")
+        title #{title}
+    body
+        nav(class='navbar navbar-expand-lg navbar-default p-3 px-md-4 border-bottom box-shadow')
+            a(class='navbar-brand' href='/')
+             img.d-inline-block.align-top(src='img/logo500px.png', width='200', height='50', alt='Tigerweb')
+            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation")
+              span(class="navbar-toggler-icon")
+                i.fa.fa-bars
+            div(class="collapse navbar-collapse" id="navbarColor02")
+                ul(class="navbar-nav ml-auto")
+                    li(class="nav-item")
+                        a(class="nav-link" href='/control/panel') Panel
+                    li(class="nav-item")
+                        a(class="nav-link" href='/control/domain/add') Add Domain
+                    li(class="nav-item")
+                        a(class="nav-link" href='/pages/services') Services
+                    li(class="nav-item")
+                        a(class="nav-link" href='/blog/articles/view') Blog
+                    li(class="nav-item")
+                        a(class="nav-link" href='/pages/contact') Contact
+                    if user
+                        li(class="nav-item")
+                            a(class="nav-link" href='/blog/articles/add') Add Article
+                    if user
+                        li(class="nav-item")
+                            a(class="nav-link" href='/users/dashboard') Dashboard 
+                        li.nav-item.dropdown
+                            a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                | More
+                            .dropdown-menu.dropdown-menu-right(aria-labelledby='navbarDropdownMenuLink')
+                                a.dropdown-item(href='/users/dashboard') Dashboard
+                                a.dropdown-item(href='/users/profile') Profile
+                                a.dropdown-item(href='/users/changepassword') Change Password
+                                .dropdown-divider
+                                a.dropdown-item(href='/users/logout') Logout
+        .container
+            != messages('message', locals)
+            if errors
+              each error, i in errors
+                div(class="alert alert-danger mt-4") #{error.msg}
+    block content
+    
+    
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+    script(src="/dist/js/bootstrap.min.js")
+    script(src="/dist/js/popper.min.js")
+    script(src="/dist/js/holder.min.js")
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+    script(src="/js/main.js")
+        

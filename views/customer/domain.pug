@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+
+    .container.mt-4
+        div(class="card mt-4")
+            h5(class="card-header bg-primary text-white") My Domains
+            table.table
+                thead
+                    tr
+                    th(scope='col') Domain Name
+                    th(scope='col') Created
+                    th(scope='col') Expire
+                    th(scope='col') Status
+                tbody
+                each domains, i in domain
+                    tr
+                        td #{domains.domain}
+                        td #{domains.created}
+                        td #{domains.expire}
+                        td
+                            if domains.status === 'Active'
+                                button.btn.btn-success Active
+                            if domains.status === 'Inactive'
+                                button.btn.btn-danger Inactive

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+ .container.mt-4
+  h1 #{article.title}
+  h6 Posted by #{author}
+  hr
+  p #{article.body}
+  hr
+  if user
+    if user.id == article.author
+      a.btn.btn-success(href='/blog/articles/edit/'+article._id) Edit
+      a.btn.btn-danger.ml-2.delete-article(href='', data-id=article._id) delete

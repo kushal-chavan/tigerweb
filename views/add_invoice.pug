@@ -1,0 +1,37 @@
+extends layout
+
+block content
+ .container
+  div(class="card col-md-6 offset-md-3 mt-5")
+    div(class="card-body")
+        h1(class="card-title text-center mb-4") Add Invoice
+        form(method='POST', action='/users/domain/add')
+            .form-row
+                .form-group.col-md-6
+                    label Invoice ID
+                    input.form-control(name='invoice_id', type='text')
+                .form-group.col-md-6
+                    label Total Amount
+                    input.form-control(name='total_amount', type='text')
+            .form-row
+                .form-group.col-md-6
+                    label Invoice Date
+                    input.form-control#datepicker(name='invoice_date', type='text')
+                .form-group.col-md-6
+                    label Due Date
+                    input.form-control#datepicker(name='due_date', type='text')
+            .form-group
+                label Customer Company Name
+                input.form-control(name='customer_company', type='text')
+            .form-group
+                label User id
+                input.form-control(name='user_id', type='text')
+            .form-group
+                label Remember
+                input.form-control(name='remember', type='text')
+            .form-group
+                label Status
+                select.form-control(name='status', type='text')
+                    option Unpaid
+                    option Paid
+            input.btn.btn-primary(type='submit', value='Submit')

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+ .container
+  div(class="card col-md-6 offset-md-3 mt-5")
+    div(class="card-body")
+        h1(class="card-title text-center") #{title}
+        form(method='POST', action='/users/domain/add')
+            .form-group
+                label Domain Name
+                input.form-control(name='domain', type='text')
+            .form-group
+                label Phone Number
+                input.form-control(name='phone', type='number')
+            .form-group
+                label Email
+                input.form-control(name='email', type='email')
+            .form-group
+                label User id
+                input.form-control(name='user_id', type='text')
+            .form-group
+                label Created Date
+                input.form-control(name='created', type='text')
+            .form-group
+                label Expire Date
+                input.form-control(name='expire', type='text')
+            .form-group
+                label Status
+                select.form-control(name='status', type='text')
+                    option Active
+                    option Inactive
+            input.btn.btn-primary(type='submit', value='Submit')

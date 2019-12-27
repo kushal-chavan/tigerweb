@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+
+    .container.mt-4
+        div(class="card mt-4")
+            h5(class="card-header bg-warning") My Invoice history
+            table.table
+                thead
+                    tr
+                    th(scope='col') Invoice #
+                    th(scope='col') Invoice Date
+                    th(scope='col') Due Date
+                    th(scope='col') Total
+                    th(scope='col') Status
+                tbody
+                    tr
+                        th(scope='row') 1
+                        td 16/1/2018
+                        td 26/1/2018
+                        td Rs 1500/-
+                        td
+                          button.btn.btn-success Paid
+                    tr
+                        th(scope='row') 2
+                        td 20/1/2018
+                        td 26/1/2018
+                        td Rs 1500/-
+                        td
+                          button.btn.btn-success Paid
+                    tr
+                        th(scope='row') 3
+                        td 2/1/2018
+                        td 26/1/2018
+                        td Rs 1500/-
+                        td
+                          button.btn.btn-success Paid
