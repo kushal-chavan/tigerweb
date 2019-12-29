@@ -171,8 +171,8 @@ router.post('/forgot-password', (req, res, next) => {
             port: 587,
             secure: false, // true for 465, false for other ports
             auth: {
-                user: 'tigerwebapps@gmail.com',
-                pass: 'kushal@diano@100'
+                user: 'nopass@gmail.com',
+                pass: 'nopass'
           }
         });
         const mailOptions = {
