@@ -1,14 +1,14 @@
 # tigerweb
 
-what is it?
+# what is it?
 ->its normal website + Blog with Auth
 
-What's included 
+# What's included 
 Node.js
 Express framework
 PUG template engine
 Passport.js for Auth
 Mongo DB (Atlas is used)
 
-#Installation
+# Installation
 npm install [that's it]
